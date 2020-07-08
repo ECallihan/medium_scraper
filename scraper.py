@@ -160,13 +160,12 @@ while link_num < MAX_LINKS:
     link_num += 1
 # This displays the content of the output file to the monitor if the readFile
 # option is used.
-t = open(data_file, "r", encoding="utf-8")
-print(t.read())
-t.close()
-
-print()
-print()
+if READ_FILE:
+    t = open(data_file, "r", encoding="utf-8")
+    print(t.read())
+    t.close()
 # This displays the links on the final page - used for testing.
+# print()
 # for link in unique_links:
 #     print(link)
 
